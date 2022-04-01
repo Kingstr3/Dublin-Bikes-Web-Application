@@ -1,0 +1,92 @@
+#header {
+  height: 10%;
+  margin: auto;
+  width: 50%;
+}
+
+.flex-container {
+    display: flex;
+    height: 60%;
+}
+
+#map {
+    width: 70%;
+}
+
+#sidescroll {
+    width: 30%;
+    overflow: none;
+}
+
+#sidescroll > ul {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    list-style-type: none;
+    text-align-last: left;
+    height: 80%;
+    border-left: 5px solid red;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+#sidescroll > ul li {
+  padding: 8px 8px;
+  border-bottom: 1px solid #ddd;
+}
+#sidescroll > ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+#sidescroll > ul li:last-child {
+  border-bottom: none
+}
+
+#sidescroll > p {
+    margin-left: 15px;
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.chart-container {
+    display: flex;
+    height: 30%;
+}
+
+.chart-container > div {
+    width: 50%;
+}
+/* add styling for legend */
+#legend {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #000;
+}
+
+#legend > h3 {
+    margin: auto;
+    width: 50%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.weather p {
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    display: block;
+    min-width: 220px;
+}
+
+.weather img {
+    float: right;
+}

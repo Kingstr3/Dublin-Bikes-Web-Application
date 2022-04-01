@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Flask app</title>
+	<meta name="description" content="First index.html">
+	<meta name="author" content="Cyclepaths">
+
+	<!-- <link rel="style" href="css/styles.css" -->	
+	<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" >
+
+	<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+	<div id="header">
+
+        <h2>Bicycle Availability and Weather Information</h2>
+
+        <form action="/form/submit" method="post">
+        <label>Please choose a day and time:</label>
+        <select id="day">
+          <option value="0">Monday</option>
+          <option value="1">Tuesday</option>
+          <option value="2">Wednesday</option>
+          <option value="3">Thursday</option>
+          <option value="4">Friday</option>
+          <option value="5">Saturday</option>
+          <option value="6">Sunday</option>
+        </select>
+
+        <select id="time">
+          <option value="5">05.00 AM</option>
+          <option value="6">06.00 AM</option>
+          <option value="7">07.00 AM</option>
+          <option value="8">08.00 AM</option>
+          <option value="9">09.00 AM</option>
+          <option value="10">10.00 AM</option>
+          <option value="11">11.00 AM</option>
+          <option value="12">12.00 PM</option>
+          <option value="13">01.00 PM</option>
+          <option value="14">02.00 PM</option>
+          <option value="15">03.00 PM</option>
+          <option value="16">04.00 PM</option>
+          <option value="17">05.00 PM</option>
+          <option value="18">06.00 PM</option>
+          <option value="19">07.00 PM</option>
+          <option value="20">08.00 PM</option>
+          <option value="21">09.00 PM</option>
+          <option value="22">10.00 PM</option>
+          <option value="23">11.00 PM</option>
+        </select>
+
+        <input type="button" onclick="updateState()" value="submit">
+    </form>
+	</div>
+
+    <div class="flex-container">
+        <div id="map"></div>
+        <div id ="sidescroll">
+            <p>Stations:</p>
+            <ul id="stationList">
+            </ul>
+        </div>
+    </div>
+
+
+	<div class="chart-container">
+		<div id="chartL"></div>
+		<div id="chartR"></div>
+	</div>
+
+    <div id="legend">
+        <h3>Legend</h3>
+    </div>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key={YOUR GOOGLE MAPS DEV KEY HERE}&callback=initCharts&libraries=&v=weekly" async></script>
+</body>
+</html>
