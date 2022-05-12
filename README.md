@@ -2,9 +2,6 @@
 
 This repository is submitted as partial fullfilment of the Software Enginering (COMP30830) module for the MSc of Computer Science (conversion) course. The purpose of this project is to employ the agile scrum methodology of development to serve a web application. 
 
-## Development Team
-
-Eoghan @Eoghan-dev | Simona @rs377 | Ross @Kingstr3
 
 ## Applciation architecture
 The combination of the web framework known as Flask and Amazon Web Services (AWS) provides a majority of the structure required to serve the web application for public use. The web application functions as a simple way to display relevant information for users who wish to rent a Dublin bike. For one to view data there must be data to view, this is where AWS first comes into play. The data to be displayed for this web service was Dublin bike rental station data and weather data for the surrounding area. This data was scraped from the respective websites (jcdecaux and openweather) and saved to a MySQL database running in Amazons RDS cloud.
